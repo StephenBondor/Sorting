@@ -25,12 +25,6 @@ def merge_sort(arr):
     return merge(merge_sort(arr[:mid]), merge_sort(arr[mid:]))
 
 
-my_arr = [2, 5, 9, 7, 4, 1, 3, 8, 6]
-print(my_arr)
-my_arr = merge_sort(my_arr)
-print(my_arr)
-
-
 # STRETCH: implement an in-place merge sort algorithm
 def merge_in_place(arr, start, mid, end):
     # TO-DO
@@ -47,5 +41,11 @@ def merge_sort_in_place(arr, l, r):
 # STRETCH: implement the Timsort function below
 # hint: check out https://github.com/python/cpython/blob/master/Objects/listsort.txt
 def timsort(arr):
-
+    arr = sorted(arr)
     return arr
+
+
+my_arr = [2, 5, 9, 7, 4, 1, 3, 8, 6]
+print(my_arr)
+my_arr = timsort(my_arr)
+print(my_arr)
